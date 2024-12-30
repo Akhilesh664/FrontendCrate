@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //   var age=[1,2,3,4,5,6,7,9,8];
+
+    // //   document.write(age[4])
+
+    //   var i=0;
+    //   while(i<age.length)
+    //   {
+    //     document.write("<br/>"+age[i])
+    //     i++;
+    //   }
+
+    function search()
+    {
+        var nameList=["rajeev","rakesh","roshan","ravi","rupesh","ranjeet","ranjana","ritesh"];
+        var val=prompt("Enter a name ?")
+        var temp=0;
+        for(var i=0;i<nameList.length;i++)
+        {
+            if(nameList[i]==val)
+            {
+                // document.write("<br/> Your name is found "+val)
+                temp=1;
+            }
+            // else{
+            //     document.write("<br/> Your name is not found "+val)
+            // }
+        }
+
+        if(temp==1)
+        {
+              document.write("<br/> Your name is found "+val)
+        }
+        else
+        {
+                document.write("<br/> Your name is not found "+val)
+        }
+
+        
+
+    }
+
+    function minNum()
+    {
+        var age=[4,5,6,3,8,9];
+        var temp=age[0];
+        for(var i=0;i<age.length;i++)
+        {
+            if(age[i]<=temp)
+            {
+                temp=age[i];
+            }
+        }
+        document.write("<br/> Min age is "+temp)
+
+    }
+    function sumOfArray()
+    {
+        var sal=[5,5,5,5,5];
+        var sum=0;
+        for(var i=0;i<sal.length;i++)
+        {
+            0=0+sal[2]
+            10=10+5
+        }
+        document.write("<br/> Sum of array is "+sum)
+    }
+
+
+    </script>
+</head>
+<body>
+    <input type="submit" value="Serach Data" onclick="search()">
+    <br/>
+    <input type="submit" value="Min" onclick="minNum()">
+    <br/>
+    <input type="submit" value="Sub of array" onclick="sumOfArray()">
+
+    <!-- Wap in js create a array and find how many even number and odd number 
+    and postive number and negative within a single array ?
+
+    Wap in js create a employee salary for 10 person  and 
+    if salray range betwwen
+
+    1000 to 10000
+        bouns = 5%
+
+    10000 to 20000
+        bouns=10% 
+    
+    20000 to 30000
+        bouns=15%   -->
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+
+		function first_name()
+		{
+			setTimeout(()=>{ console.log("Rajeev")},3000)
+			
+		}
+        function middle_name()
+        {
+            setTimeout(()=>{ console.log("Kumar")},6000)
+        }
+		function last_name()
+		{
+			console.log("Last Name");
+		}
+        function fullName()
+		{
+            setTimeout(()=>{ console.log("rajeev Kumar singh")},3000)
+		}
+		async function check_async()
+		{
+				console.log("Up");
+				const first=await first_name();
+                const middle=await middle_name();
+				const last=await last_name();
+				console.log(first,middle,last)
+				console.log("Last")
+                console.log("Last")
+                console.log("Last")
+                console.log("Last last")
+                const f_name=await fullName();
+                console.log(f_name);
+				// console.log(last)
+		}
+		check_async();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

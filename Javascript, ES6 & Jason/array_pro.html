@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function findAll()
+        {
+            var num=[2,3,4,-5,-6,7,8,9];
+            var even=0;
+            var odd =0;
+            var pos=0;
+            var neg=0;
+            for(var i=0;i<num.length;i++)
+            {
+                if(num[i]>0)
+                {
+                    pos++;
+                }
+                else 
+                {
+                    neg++;
+                }
+                if(num[i]%2==0)
+                {
+                    even++;
+                }
+                else 
+                {
+                    odd++;
+                }
+            }
+            document.write("<br/>Total postive number is "+pos)
+            document.write("<br/>Total negative number is "+neg)
+            document.write("<br/>Total even number is "+even)
+            document.write("<br/>Total odd number is "+odd)
+        }
+
+        function salaryRange()
+        {
+            var num=[4000,8000,14000,24000,34000,26000];
+            for(var i=0;i<num.length;i++)
+            {
+                if(num[i]>=1000 && num[i]<=10000)
+                {
+                    var total=num[i]*5/100;
+                    var f_amo=total+num[i];
+                    document.write("<br/> Employee basic salary is "+num[i]+" 5 % added bonus amount is "+total+" Final amount is "+f_amo)
+                }
+                if(num[i]>10000 && num[i]<=20000)
+                {
+                    var total=num[i]*10/100;
+                    var f_amo=total+num[i];
+                    document.write("<br/> Employee basic salary is "+num[i]+" 10 % added bonus amount is "+total+" Final amount is "+f_amo)
+                }
+                 if(num[i]>20000 && num[i]<=30000)
+                {
+                    var total=num[i]*15/100;
+                    var f_amo=total+num[i];
+                    document.write("<br/> Employee basic salary is "+num[i]+" 15 % added bonus amount is "+total+" Final amount is "+f_amo)
+                }
+            }
+        }
+
+        function updatedata()
+        {
+            var nameList=["Sanjeev","Sonu","Monu","Golu","Pintu","Rakesh"];
+            var old_name=prompt("Enter a old name ?")
+            var new_name=prompt("Enter a new name ?")
+            var temp=false;
+            for(var i=0;i<nameList.length;i++)
+            {
+                if(nameList[i]==old_name)
+                {
+                    nameList[i]=new_name;
+                    temp=true;
+                }
+            }
+            document.write("<br/>")
+           if(temp==false)
+           {
+                document.write("<br/> Old Name not matched "+old_name)
+           }
+           else{
+            for(var i=0;i<nameList.length;i++)
+            {
+                document.write("<br/>"+nameList[i])
+            }
+           }
+
+        }
+        function deleteData()
+        {
+            var nameList=["Sanjeev","Sonu","Monu","Golu","Pintu","Rakesh"];
+            var data=prompt("Enter a  name ?")
+            var temp=false;
+            for(var i=0;i<nameList.length;i++)
+            {
+                if(nameList[i]==data)
+                {
+                    nameList[i]=""
+                    temp=true;
+                }
+            }
+            if(temp==false)
+           {
+                document.write("<br/>  Name not matched "+data)
+           }
+           else
+           {
+            for(var i=0;i<nameList.length;i++)
+            {
+                document.write("<br/>"+nameList[i])
+            
+            }
+           }
+
+        }
+
+        function reverseOrder()
+        {
+            var nameList=["Sanjeev","Sonu","Monu","Golu","Pintu","Rakesh"];
+            var blank=[];
+            for(var i=nameList.length-1,j=0;i>=0;i--,j++)
+            {
+                // document.write("<br/>"+nameList[i])
+                blank[j]=nameList[i];
+
+            }
+            document.write("<br/>")
+            for(var i=0;i<blank.length;i++)
+            {
+                document.write("<br/>"+blank[i])
+            }
+
+        }
+    </script>
+</head>
+<body>
+    
+
+    <input type="submit" value="Find All" onclick="findAll()">
+    <br/>
+    <input type="submit" value="Range Find" onclick="salaryRange()">
+
+    <br/>
+    <input type="submit" value="Update Array" onclick="updatedata()">
+    <br>
+    <input type="submit" value="Delete" onclick="deleteData()">
+    <br>
+    <!-- Wap in js create a name list array and print name in reverse order / Desc Order 
+    with blank empty array use. ? -->
+
+    <!-- What is object ? -->
+
+    <!-- What is function ? -->
+    
+    <br>
+    <input type="submit" value="Reverse" onclick="reverseOrder()">
+
+    
+</body>
+</html>

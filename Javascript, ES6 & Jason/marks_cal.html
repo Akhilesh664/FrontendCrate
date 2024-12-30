@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function marksCal()
+        {
+            var phy=parseInt(prompt("Enter a phy number ?"))
+            var che=parseInt(prompt("Enter a che number ?"))
+            var math=parseInt(prompt("Enter a math number ?"))
+            var total=phy+che+math;
+            var avg=total/3;
+            // alert(avg)
+            if(phy>=30)
+            {
+                if(che>=30)
+                {
+                    if(math>=30)
+                    {
+                            if(avg>=1 && avg<30)
+                            {
+                                alert("You are fail")
+                            } 
+                            else if(avg>=30 && avg<45)
+                            {
+                                alert("You are ||| div")
+                            }
+                            else if(avg>=45 && avg<60)
+                            {
+                                alert("You are || div")
+                            }
+                            else if(avg>=60 && avg<=100)
+                            {
+                                alert("You are | div")
+                            }
+                    }
+                    else 
+                    {
+                        alert("You fail in math"+math)
+                    }
+                }
+                else 
+                    {
+                        alert("You fail in che"+che)
+                    }
+            }
+            else 
+                    {
+                        alert("You fail in phy"+phy)
+                    }
+        }
+    </script>
+</head>
+<body>
+    
+
+    <input type="submit" value="marks cal" onclick="marksCal()">
+
+
+
+    <!-- Wap in js accept a math,phy,che number each papper is max 100 number
+    cal avg and print grade
+
+    0 to 30 => Fail
+    30 to 45 =>|||
+
+    45 to 60 => ||
+
+    60 above => | -->
+</body>
+</html>

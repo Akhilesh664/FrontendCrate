@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function loadData()
+        {
+            var nameList=["Rajeev","Sanjeev","Ramesh"]
+            document.getElementById("result").innerHTML=nameList
+        }
+
+        function addinfirst()
+        {
+            var nameList=["Rajeev","Sanjeev","Ramesh"]
+            var val=prompt("Enter a name ?")
+            nameList.unshift(val)
+            document.getElementById("result").innerHTML=nameList
+            
+        }
+        function addinlast()
+        {
+            var nameList=["Rajeev","Sanjeev","Ramesh"]
+            var val=prompt("Enter a name ?")
+            nameList.push(val)
+            document.getElementById("result").innerHTML=nameList
+        }
+
+        function deletefromfirst()
+        {
+            var nameList=["Rajeev","Sanjeev","Ramesh"];
+            var data=nameList.shift();
+            // alert(data)
+            var rec=confirm("Do you want to delete this "+data+" ?");
+            // alert(rec)
+            if(rec==true)
+            {
+                document.getElementById("result").innerHTML=nameList
+            }
+            else 
+            {
+                nameList.unshift(data);
+                document.getElementById("result").innerHTML=nameList;
+            }
+
+           
+        }
+
+        function deletefromlast()
+        {
+            var nameList=["Rajeev","Sanjeev","Ramesh"];
+            var data=nameList.pop();
+            var rec=confirm("Do you want to delete this "+data+" ?");
+            if(rec==false)
+            {
+                nameList.push(data);
+                document.getElementById("result").innerHTML=nameList;
+            }
+            else{
+                document.getElementById("result").innerHTML=nameList;
+            }
+
+        }
+
+        function findMax(in_array)
+        {
+            var temp=in_array[0];
+            for(var i=0;i<in_array.length;i++)
+            {
+                if(in_array[i]>=temp)
+                {
+                    temp=in_array[i]
+                }
+            }
+            document.write(temp)
+        }
+
+        var sal=[10,20,30,60,50,40];
+        findMax(sal);
+        document.write("<br/>")
+        var sal=[10,20,30,60,50,40,90,80];
+        findMax(sal);
+        document.write("<br/>")
+        var sal=[10,20,30,60,50,410,90,80];
+        findMax(sal);
+        document.write("<br/>")
+        var sal=[10,20,30,60,50,40,190,80];
+        findMax(sal);
+        document.write("<br/>")
+        var sal=[10,20,30,60,550,40,90,80];
+        findMax(sal);
+        document.write("<br/>");
+        function search(in_array,val)
+        {
+            var temp=false;
+            for(var i=0;i<in_array.length;i++)
+            {
+                if(in_array[i]==val)
+                {
+                    temp=true
+                }
+            }
+            if(temp==true)
+            {
+                return val;
+            }
+            else 
+            {
+                document.write("Value is not found "+val)
+            }
+        }
+        var sal=[10,20,30,60,50,410,90,80];
+       var rec= search(sal,30)
+       if(rec>0)
+       {
+        document.write("Data id found"+rec)
+       }
+       
+
+        
+    </script>
+</head>
+<body onload="loadData()">
+    
+
+
+    <table border="1" align="center" width="60%">
+        <tr>
+            <td colspan="2">
+                <div id="result" align="center"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Add In first" onclick="addinfirst()">
+            </td>
+            <td>
+                <input type="submit" value="Add In last" onclick="addinlast()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Delete From first" onclick="deletefromfirst()">
+            </td>
+            <td>
+                <input type="submit" value="Delete From last" onclick="deletefromlast()">
+            </td>
+        </tr>
+    </table>
+
+    <br/>
+    <input type="submit" value="Find Max" onclick="findMax()">
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function linePrint()
+        {
+            var line=parseInt(prompt("Enter a number ?"))
+            var i=1;                        
+            while(i<=line)
+            {
+                    // document.write("<br/>"+i)
+                    var j=1;                    
+                    while(j<=i)
+                    {
+                        document.write(j)
+                        j++;
+                    }
+                    document.write("<br/>")
+                    i++;
+            }
+        }
+        function linePrint1()
+        {
+            var line=parseInt(prompt("Enter a number ?"))
+            var i=1;                        
+            while(i<=line)
+            {
+                    // document.write("<br/>"+i)
+                    var j=line;                    
+                    while(j>=i)
+                    {
+                        document.write(j)
+                        j--;
+                    }
+                    document.write("<br/>")
+                    i++;
+            }
+        }
+
+        
+    </script>
+</head>
+<body>
+    <!-- 1
+    12
+    123
+    1234
+    12345 -->
+
+    <input type="submit" value="Line Print" onclick="linePrint()">
+    <input type="submit" value="Line Print" onclick="linePrint1()">
+    <!-- 54321
+    5432
+    543
+    54
+    5 -->
+    
+</body>
+</html>

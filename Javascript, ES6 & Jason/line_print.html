@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function linePrint()
+        {
+            var line=parseInt(prompt("Enter a line number ?")); // input
+            var i=1;
+            while(i<=line)
+            {
+                var j=1;
+                while(j<=i)
+                {
+                    document.write(j)
+                    j++
+                }
+                document.write("<br/>")
+                i++;
+            }
+
+        }
+        function linePrint1()
+        {
+            var line=parseInt(prompt("Enter a line number ?"))
+            var i=1;
+            while(i<=line)
+            {
+                // document.write("<br/>"+i)
+                var j=line;
+                while(j>=i)
+                {
+                    document.write(j);
+                    j--;
+                }
+                document.write("<br/>")
+                i++;
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <input type="submit" value="Line print" onclick="linePrint()">
+    <br/>
+    <!-- Wap in js  accept a line nd print in this format ? -->
+
+    <!-- 54321
+    5432
+    543
+    54
+    5 -->
+
+    <input type="submit" value="line print 1" onclick="linePrint1()">
+
+    <br>
+    <!-- Wap in js accept a row number and col number and print in this format ?
+
+    row=4
+    col=6
+
+    ******
+    ******
+    ******
+    ******
+
+    Wap in js accept a row and col as same 
+
+    r_and_c=4
+
+    ****
+    ****
+    ****
+    **** -->
+    
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function maxFour()
+        {
+            var a=parseInt(prompt("Enter a first number ?"))
+            var b=parseInt(prompt("Enter a second number ?"))
+            var c=parseInt(prompt("Enter a thrid number ?"))
+            var d=parseInt(prompt("Enter a four number ?"))
+
+            // if(a>b && a>c && a>d)
+            // {
+            //     alert("Max number is "+a)
+            // }
+            // else  if(b>a && b>c && b>d)
+            // {
+            //     alert("Max number is "+b)
+            // } else  if(c>a && c>b && c>d)
+            // {
+            //     alert("Max number is "+c)
+            // }
+            // else{
+            //     alert("Max number is "+d)
+            // }
+
+            if(a>b)
+            {
+                if(a>c)
+                {
+                    if(a>d)
+                    {
+                        alert("Max number is "+a)
+                    }
+                    else
+                    {
+                        alert("Max number is "+d)
+                    }
+                }
+                else if(c>d)
+                {
+                    alert("Max number is "+c)
+                }
+                else{
+                    alert("Max number is "+d)
+                }
+            }
+            else if(b>c)
+            {
+                if(b>d)
+                {
+                    alert("Max number is "+b)
+                }
+                else{
+                    alert("Max number is "+d)
+                }
+            }
+            else if(c>d)
+            {
+                alert("Max number is "+c)
+            }
+            else{
+                alert("Max number is "+d)
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <input type="submit" value="Max Four" onclick="maxFour()">
+
+    <!-- Wap in js accept a four numbers check and display max of that number ? -->
+    <!-- Wap in js accept a five numbers check and display max of that number ? -->
+    
+</body>
+</html>

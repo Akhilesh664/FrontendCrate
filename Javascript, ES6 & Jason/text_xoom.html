@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var count=14;
+        function fontChange()
+        {
+            var counter=count+=1;
+                document.getElementById("text1").style.fontSize=counter+"px";
+                if(count>=25)
+                {
+                    document.getElementById("text1").style.color="red"
+                }
+                if(count>=35)
+                {
+                    document.getElementById("text1").style.color="green"
+                }
+                if(count>=45)
+                {
+                    document.getElementById("text1").style.color="yellow"
+                }
+                if(count>=55)
+                {
+                    count=14
+                    document.getElementById("text1").style.color="black"
+                }
+        }
+    </script>
+</head>
+<body>
+
+    <div align="center" onmousemove="fontChange()" id="text1">
+            javaScript
+    </div>
+    
+</body>
+</html>

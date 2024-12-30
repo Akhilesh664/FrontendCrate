@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            function posNeg()
+            {
+                var data=parseInt(prompt("Enter a number ?"));
+                // if(data>0)
+                // {
+                //         document.write("It is a postive number "+data)
+                // }
+                // if(data<0)
+                // {
+                //         document.write("It is a negatib=ve number "+data)
+                // }
+
+                if(data>0)
+                {
+                    // scope // block // statemnets
+                    document.write("It is a postive number "+data)
+                }
+                else 
+                {
+                    document.write("It is a negative number "+data)
+                }
+
+                // if(condtion)
+                // {
+
+                // }
+
+            }
+
+            function evenOdd()
+            {
+                var val=parseInt(prompt("Enter a number ?"))
+                if(val%2==0)
+                {
+                    document.write("Its is evenn number "+val)
+                }
+                else{
+                    document.write("Its is odd number "+val)
+                }
+            }
+            function weekday()
+            {
+                var day=parseInt(prompt("Enter a weekday number ?"))
+                
+                if(day==1)
+                {
+                        document.write("<br/> Today is Monday");
+                }
+                else if(day==2)
+                {
+                        document.write("<br/> Today is Tues");
+                }
+                else if(day==3)
+                {
+                        document.write("<br/> Today is Wend");
+                }
+                else if(day==4)
+                {
+                        document.write("<br/> Today is Thur");
+                }
+                else if(day==5)
+                {
+                        document.write("<br/> Today is Frie");
+                }
+                else if(day==6)
+                {
+                        
+                    document.write("<br/> Today is sater");
+                }
+                else if(day==7)
+                {
+                        document.write("<br/> Today is Sund");
+                }
+                else{
+                    document.write("<br/> Invalid Input");
+                }
+            }
+    </script>
+</head>
+<body>
+    
+    <input type="submit" value="posNeg" onclick="posNeg()">
+    <br>
+    <input type="submit" value="evenodd" onclick="evenOdd()">
+
+    <br>
+    <!-- Wap in js accept a week day number and print week day name ? -->
+    <br>
+    <input type="submit" value="Weekday" onclick="weekday()">
+
+    <!-- Wap in js accept a month number and print day of that month number ? -->
+
+</body>
+</html>

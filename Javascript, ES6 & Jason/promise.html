@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //     console.log("first line 1");
+    //     console.log("first line 2");
+    //     setTimeout(()=>{
+	// 		console.log("I am coming from settime out 2 sec")
+	// 	},2000)
+    //     console.log("first line 3");
+    //    setTimeout(()=>{
+	// 		console.log("I am coming from settime out 4 sec ")
+	// 	},4000)
+    //     console.log("first line 4");
+    //     console.log("first line 5");
+    //     setTimeout(()=>{
+	// 		console.log("I am coming from settime out 6 sec")
+	// 	},6000)
+    //     console.log("first line 6");
+
+    const proObj=new Promise((resolve,reject)=>{
+			let temp=true;
+			if(temp==true)
+			{
+				resolve("I am resolve from promise")
+			}
+			else
+			{
+				reject("I am reject from promise")
+			}
+		});
+		// proObj();
+
+		proObj.then
+		(
+			(value)=>{ console.log(value)},
+			(error)=>{ console.log(error)}
+		);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

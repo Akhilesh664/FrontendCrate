@@ -1,0 +1,92 @@
+.first_row
+{
+    height: 120px;
+}
+.main_con
+{
+    background-color: darkblue;
+}
+.last_row
+{
+    height: 120px;
+}
+.mar_man
+{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.head
+{
+    font-size: 30px;
+}
+.mar_man1
+{
+    margin-top:7%;
+    margin-bottom: 7%;
+}
+.text_man
+{
+    width: 100%;
+    height: 35px;
+    border-width: 0px 0px 2px 0px;
+    outline: none;
+
+}
+.my_btn
+{
+    width: 180px;
+}
+
+.img2
+{
+    display: none;
+}
+
+
+.img3
+{
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .img2
+    {
+        display: block;
+        background-size: 100%;
+        width: 100%;
+    }
+    .img3
+    {
+        display: block;
+        width: 100%;
+        background-size: 100%;
+    }
+   .img1
+   {
+    display: none;
+   }
+   .my_btn
+{
+    width: 100%;
+}
+.a_man
+{
+    text-align: center;
+}
+
+
+.first_row
+{
+    height: 180px;
+}
+.main_con
+{
+    background-color: white;
+}
+.last_row
+{
+    height: 180px;
+}
+  }

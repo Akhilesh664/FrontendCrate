@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    .t_man 
+    {
+        width: 90%;
+        height: 40px;
+    }
+    .my_btn
+    {
+        border-style: solid;
+        width: 120px;
+        height: 40px;
+        color: white;
+        background-color: green;
+        cursor: pointer;
+    }
+    font 
+    {
+        color: red;
+    }
+   </style>
+   <script>
+    function validation()
+    {
+        let f_name=document.getElementById("f_name").value; 
+        let f_name_len=f_name.length;
+
+        let m_name=document.getElementById("m_name").value; 
+        let m_name_len=m_name.length;
+
+        let l_name=document.getElementById("l_name").value; 
+        let l_name_len=l_name.length;
+
+        let mob_number=document.getElementById("mob_number").value;
+        var Mobile_mob_p = /^[1-9]{1}[0-9]{9}$/;
+
+        let email_id=document.getElementById("email_id").value; 
+        let Email_pattern =/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+        let password=document.getElementById("pass").value;
+        //Note::=which contain at least one numeric digit, one uppercase, and one lowercase letter"
+			//var pas = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}/;
+            let passlen=password.length;
+		var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;  
+        
+
+        if(f_name=="")
+        {
+            document.getElementById("e_f_name").innerHTML="Enter a fisrt name ?";
+            return false;
+
+        }
+        else if(f_name_len<=2)
+        {
+            document.getElementById("e_f_name").innerHTML="First name must br grater then 2 chacaters ";
+            return false;
+        }
+        else 
+        {
+            // alert("Next")
+            document.getElementById("m_name").focus();
+            document.getElementById("e_f_name").innerHTML=""
+        }
+
+        if(m_name=="")
+        {
+            document.getElementById("e_m_name").innerHTML="Enter a middle name ?";
+            return false;
+        }
+        else if(m_name_len<=2)
+        {
+            document.getElementById("e_m_name").innerHTML="Middle name must br grater then 2 chacaters ";
+            return false;
+        }
+        else 
+        {
+            document.getElementById("e_m_name").innerHTML=""
+            document.getElementById("l_name").focus();
+        }
+
+        if(l_name=="")
+        {
+            document.getElementById("e_l_name").innerHTML="Enter a fisrt name ?";
+            return false;
+
+        }
+        else if(l_name_len<=2)
+        {
+            document.getElementById("e_l_name").innerHTML="First name must br grater then 2 chacaters ";
+            return false;
+        }
+        else 
+        {
+            // alert("Next")
+            document.getElementById("state").focus();
+            document.getElementById("e_l_name").innerHTML=""
+            // alert("Next")
+        }
+
+        if(document.getElementById('state').selectedIndex==0)
+		{
+		document.getElementById('e_state').innerHTML="Pls select state";
+				return false;	
+		}
+		else
+		{
+			document.getElementById('gender').focus();
+			document.getElementById('e_state').innerHTML="";
+            // alert("Next")
+		}
+        if (gender[0].checked == true)
+         {
+                 document.getElementById('mob_number').focus();
+				document.getElementById('e_gender').innerHTML="";
+                // alert("Next")
+         } 
+         else if (gender[1].checked == true) 
+         {
+            document.getElementById('mob_number').focus();
+				document.getElementById('e_gender').innerHTML="";
+                alert("Next")
+         }
+         else 
+         {
+                     document.getElementById('e_gender').innerHTML="Pls select Gender no";
+                    return false;
+         }
+         if(mob_number=="")
+         {
+            document.getElementById("e_mob_number").innerHTML="Pls enter mobile number ?";
+            return false;
+         }
+         else if(!mob_number.match(Mobile_mob_p))
+         {
+            document.getElementById("e_mob_number").innerHTML="Pls enter valid  mobile number ?";
+            return false;
+         }
+         else 
+         {
+            // alert("Next")
+
+            document.getElementById("email_id").focus();
+            document.getElementById("e_mob_number").innerHTML=""
+         }
+
+         if(email_id=="")
+         {
+            document.getElementById("e_email_id").innerHTML="Pls enter email id ?";
+            return false;
+         }
+         else if(!email_id.match(Email_pattern))
+         {
+            document.getElementById("e_email_id").innerHTML="Pls enter valid  email id number ?";
+            return false;
+         }
+         else 
+         {
+            // alert("Next")
+            document.getElementById("password").focus();
+            document.getElementById("e_email_id").innerHTML="";
+
+         }
+
+         if(password=="")
+         {
+            document.getElementById("e_email_id").innerHTML="Pls enter password ?";
+            return false;
+         }
+         else if(passlen<8)
+         {
+            document.getElementById("e_pass").innerHTML="password minimum 8 chcaters ";
+            return false;
+         }
+         else if(passlen>20)
+         {
+            document.getElementById("e_pass").innerHTML="password can't be  20 chcaters ";
+            return false;
+         }
+         else if(!password.match(passw))
+         {
+            document.getElementById("e_pass").innerHTML="which contain at least one numeric digit, one uppercase, and one lowercase letter";
+         }
+         else 
+         {
+            alert("Save")
+         }
+
+         
+    }
+   </script>
+</head>
+<body>
+   <form onsubmit="return validation()">
+    <table border="1" align="center" width="60%">
+        <tr>
+                <td colspan="3">
+                    <div style="text-align: center;">
+                        Form validation
+                    </div>
+                </td>
+        </tr>
+        <tr>
+            <td width="20%"><label for="">First name</label></td>
+            <td width="60%"><input type="text" name="" id="f_name" class="t_man"></td>
+            <td width="20%"><font id="e_f_name"> </font></td>
+        </tr>
+        <tr>
+            <td width="20%"><label for="">Middle name</label></td>
+            <td width="60%"><input type="text" name="" id="m_name" class="t_man"></td>
+            <td width="20%"><font id="e_m_name"> </font></td>
+        </tr>
+        <tr>
+            <td width="20%"><label for="">Last name</label></td>
+            <td width="60%"><input type="text" name="" id="l_name" class="t_man"></td>
+            <td width="20%"><font id="e_l_name"> </font></td>
+        </tr>
+        <tr>
+            <td width="20%"><label for="">Select State</label></td>
+            <td width="60%">
+                <select name="" id="state" class="t_man">
+                    <option value="">----Select State -----</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Up">Up</option>
+                    <option value="Bihar">Bihar</option>
+
+                </select>
+            </td>
+            <td width="20%"><font id="e_state"> </font></td>
+        </tr>
+        <tr>
+            <td width="20%"><label for="">Select Gender</label></td>
+            <td width="60%">
+                <input type="radio" name="gender" id="gender" value="Male">Male
+                <input type="radio" name="gender" id="gender" value="Female">Female
+            </td>
+            <td width="20%"><font id="e_gender"> </font></td>
+        </tr>
+  
+    <tr>
+        <td width="20%"><label for="">Mobile Number</label></td>
+        <td width="60%"><input type="text" name="" id="mob_number" class="t_man"></td>
+        <td width="20%"><font id="e_mob_number"> </font></td>
+    </tr>
+
+    <tr>
+        <td width="20%"> Email_id</td>
+        <td width="60%"><input type="text" name="email_id" id="email_id" class="t_man"></td>
+        <td width="20%"><font color="red" id="e_email_id"></font> </td>
+    </tr>
+    <tr>
+        <td width="20%"> Password</td>
+        <td width="60%"><input type="text" name="pass" id="pass" class="t_man"></td>
+        <td width="20%"><font color="red" id="e_pass"></font> </td>
+    </tr>
+        <tr>
+
+            <td colspan="3">
+                <div align="center">
+                    <input type="submit" value="Save" class="my_btn">
+                </div>
+            </td>
+        </tr>
+     
+            
+    </table>
+</form> 
+</body>
+</html>

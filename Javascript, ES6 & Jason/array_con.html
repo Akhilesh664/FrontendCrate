@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         var sal=[10,20,30,40,50,60,90,80,70,1,2,3,4,5,6,7,8,8,11,22,66,25,27];
+
+        // document.write(sal[3])    
+
+        // for(var data of sal)
+        // {
+        //     document.write("<br/>"+data)
+        // }
+        // var i=0;
+        // while(i<sal.length)
+        // {
+        //     // document.write("<br/>"+sal[i])
+        //     document.write("["+i+"]"+"="+sal[i]+"<br/>")
+        //     i++;
+        // }
+
+        function maxNum()
+        {
+            var sal=[10,20,30,90,50,60,40,80,70];
+            var temp=sal[0];            
+            // var i=0;
+            // while(i<sal.length)
+            // {
+            //     if(sal[i]>=temp)
+            //     {
+            //         temp=sal[i];
+            //     }
+            //     i++;
+            // }
+
+            for(var i=0;i<sal.length;i++)
+            {
+                if(sal[i]>=temp)
+                {
+                    temp=sal[i];
+                }
+            }
+
+            document.write("<br/>Max sal is "+temp)
+        }
+
+    </script>
+</head>
+<body>
+
+    <input type="submit" value="maxNum" onclick="maxNum()">
+
+    <br/>
+    <!-- Wap in js create a array and find min number ? -->
+    <!-- Wap in js create an array and print sum of array ? -->
+    
+</body>
+</html>
+

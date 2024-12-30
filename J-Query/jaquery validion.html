@@ -1,0 +1,177 @@
+<link rel="stylesheet" href="assets/css/bootstrap.css">
+<style>
+	label.error{
+		color:red;
+	}
+</style>
+
+	 <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h4 class="modal-title">Validation</h4>
+      </div>
+      <div class="modal-body">
+
+
+	<form id="formvalidate">
+			<div class="form-group">
+				<label for="">enter First name</label>
+				<input type="text" name="fname" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="">enter middle name</label>
+				<input type="text" class="form-control" name="mname">
+			</div>
+		
+			<div class="form-group">
+				<label for="">enter last name</label>
+				<input type="text" class="form-control" name="lname">
+			</div>
+			<div class="form-group">
+				<label for="">enter Email</label>
+				<input type="text" class="form-control" name="email">
+			</div>
+			<div class="form-group">
+				<label for="">enter mobile</label>
+				<input type="text" class="form-control" name="mobile">
+			</div>
+			<div class="form-group">
+				<label for="">enter age</label>
+				<input type="text" class="form-control" name="age">
+			</div>
+			<div class="form-group">
+				<label for="">enter password</label>
+					<input type="text" name="password" id="password" class="form-control">
+				</div>
+			<div class="form-group">
+				<label for="">enter confirm password</label>
+				<input type="text" class="form-control" name="cpassword">
+			</div>
+			<div class="form-group">
+				<label for="">Choose image</label>
+				<input type="file" name="image">
+			</div>
+			<div class="form-group">
+				<label for="">Choose Resume</label>
+				<input type="file" name="resume">
+			</div>
+			<button type="submit" class="btn btn-success">Save</button>
+
+
+	</form>
+
+
+
+
+</div></div></div>
+
+
+
+
+
+
+<div class="col-md-3"></div>
+
+</div>
+
+<script src="assets/js/jquery.js"></script>
+
+<script src="assets/js/jquery.validate.js"></script>
+
+<script src="assets/js/additional-methods.min.js"></script>
+
+<script>
+	  
+jQuery.validator.setDefaults({
+  debug: true,
+  success: "valid"
+});
+
+$("#formvalidate").validate({
+	rules:{
+		fname:{
+			required:true,
+			minlength:2,
+			maxlength:20,
+			lettersonly:true
+		},
+		mname:{
+			required:true,
+			minlength:2,
+			maxlength:20,
+			lettersonly:true
+		},
+		lname:{
+			required:true,
+			minlength:2,
+			maxlength:20
+		},
+		mobile:{
+			required:true,
+			phoneUS:true
+		},
+		age:{
+			required:true,
+			digits:true
+		},
+		email:{
+			required:true,
+			email:true
+		},
+		password:{
+			required:true,
+			minlength:6,
+			maxlength:25
+		},
+		cpassword:{
+			required:true,
+			equalTo:"#password"
+		},
+		image:{
+			required:true,
+			extension:"jpg|jpeg|png|bmp|gif"
+		},
+		resume:{
+			extension:"pdf|doc|docx"
+		}
+	},
+	messages:{
+		fname:{
+			required:"Please enter full name"
+		},
+		mname:{
+			required:"Please enter middle name"
+		},
+		
+		email:{
+			required:"Please enter email",
+			email:"Please enter valid email id pattern"
+		},
+		password:{
+			required:"Please enter password",
+			minlength:"Please min length 6",
+			maxlength:"Please Max length is 25"
+		},
+		cpassword:{
+			required:"Please enter confirm password",
+			equalTo:"Please same as password field"
+		},
+		image:{
+			required:"Please Choose Image",
+			extension:"Please choose these type format file for image jpg|jpeg|png|bmp|gif"
+		},
+		resume:{
+			extension:" Please choose these type format file for resume pdf|doc|docx"
+		}
+	},
+	 submitHandler: function(form) {
+      form.submit();
+    }
+})
+
+
+
+</script>

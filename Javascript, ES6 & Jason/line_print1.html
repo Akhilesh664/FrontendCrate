@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function  linePrint2()
+        {
+            var row=parseInt(prompt("Enter a row number ?"));
+            var col=parseInt(prompt("Enter a col number ?"));
+            for(var i=1;i<=row;i++)
+            {
+                for(var j=1;j<=col;j++)
+                {
+                    document.write("*")
+                }
+                document.write("<br/>")
+            }
+
+        }
+        function mix()
+        {
+            var mix=parseInt(prompt("Enter a row and col as same number ?"));
+            for(var i=1;i<=mix;i++)
+            {
+                for(var j=1;j<=mix;j++)
+                {
+                    document.write("*")
+                }
+                document.write("<br/>")
+            }
+
+        }
+    </script>
+</head>
+<body>
+
+    <input type="submit" value="line print" onclick="linePrint2()">
+    <input type="submit" value="Mix" onclick="mix()">
+    
+</body>
+</html>

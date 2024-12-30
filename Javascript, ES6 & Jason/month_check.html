@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function monCheck()
+        {
+            var mon=parseInt(prompt("Enter a month number ?"))
+            if(mon==1 || mon==3 || mon==5 || mon==7 || mon==8 || mon==10 || mon==12)
+            {
+                // document.write("31 days")
+                document.getElementById("result").innerHTML="31 days";
+            }
+            else if(mon==4 || mon==6 || mon==9 || mon==11)
+            {
+                // document.write("30 days")
+                document.getElementById("result").innerHTML="30 days";
+            }
+            else if(mon==2)
+            {
+                // document.write("28 days")
+                document.getElementById("result").innerHTML="28 days";
+            }
+            else{
+                // document.write("Invalid month number")
+                document.getElementById("result").innerHTML="Invalid month number";
+            }
+        }
+    </script>
+</head>
+<body>
+
+
+    <ul>
+        <li>1=> jan</li>
+        <li>2=> feb</li>
+        <li>3=> marc</li>
+        <li>4=> apri</li>
+        <li>5=> may</li>
+
+        <li>6=> june</li>
+        <li>7=> july</li>
+        <li>8=> agu</li>
+        <li>9=> sep</li>
+        <li>10=> oct</li>
+        <li>11=> nov</li>
+        <li>12=> dec</li>
+    </ul>
+
+    <br>
+    <div id="result"></div>
+    <br>
+    <input type="submit" value="Month check" onclick="monCheck()">
+    
+</body>
+</html>

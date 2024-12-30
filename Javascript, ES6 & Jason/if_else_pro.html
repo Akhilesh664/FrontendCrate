@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function maxNum()
+        {
+            // alert("Hi")
+            // document.write("Hi")
+            // console.log("Hi");
+            // document.getElementById("result").innerHTML="hi"
+
+            var a=parseInt(document.getElementById("a").value);
+            var b=parseInt(document.getElementById("b").value);
+
+            // alert("a "+a+" b"+b)
+            if(a>b)
+            {
+                alert("It is max num "+a)
+            }
+            else 
+            {
+                alert("It is max num "+b)
+            }
+
+        }
+        function maxThree()
+        {
+            var a=parseInt(document.getElementById("a").value);
+            var b=parseInt(document.getElementById("b").value);
+            var c=parseInt(document.getElementById("c").value);
+
+            // if(a>b)
+            // {
+            //     if(a>c)
+            //     {
+            //         alert("It is max num "+a)
+                    
+            //     }
+            //     else{
+            //         alert("It is max num "+c)
+            //     }
+            // }
+            // else if(b>c)
+            // {
+            //     alert("It is max num "+b)
+            // }
+            // else{
+            //     alert("It is max num "+c)
+            // }
+
+            if(a>b && a>c)
+            {
+                alert("It is max num "+a)
+            }
+            else if(b>a && b>c)
+            {
+                alert("It is max num "+b)
+            }
+            else 
+            {
+                alert("It is max num "+c)
+            }
+            
+        }
+
+        function weekdayFind()
+        {
+            var day=parseInt(prompt("Enter a weekday number ?"));
+
+            if(day==1)
+            {
+                document.write("Monday")
+            }
+            else if(day==2)
+            {
+                document.write("Tues")
+            }
+            else if(day==3)
+            {
+                document.write("Wen")
+            }
+            else if(day==4)
+            {
+                document.write("Thur")
+            }
+            else if(day==5)
+            {
+                document.write("Fri")
+            }
+            else if(day==6)
+            {
+                document.write("Satur")
+            }
+            else if(day==7)
+            {
+                document.write("Sun")
+            }
+            else
+            {
+                document.write("Invaild Input")
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+
+
+
+    <!-- <div id="result"></div> -->
+    <input type="text" name="" id="a">
+    <br>
+    <input type="text" name="" id="b">
+    <br>
+    <input type="text" name="" id="c">
+    <input type="submit" value="Max Num" onclick="maxNum()">
+
+
+    <br>
+
+    <input type="submit" value="Max Three" onclick="maxThree()">
+    <br>
+    <input type="submit" value="weekday" onclick="weekdayFind()">
+
+
+
+
+    <!-- Wap in js accept a two numbers acheck snd display which number is max/greater  ? -->
+    
+</body>
+</html>
